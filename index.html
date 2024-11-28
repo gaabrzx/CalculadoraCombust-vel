@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="SRC/fuel.png" type="image/x-icon" />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- POPPINS Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Calculadora de Combustível</title>
+  </head>
+
+  <body>
+    <!-- Container DIV -->
+    <div class="container">
+      <h2 class="container_title">Calcúlo do Combustível</h2>
+      <div class="input_areas">
+        <!-- Input Area -->
+        <div class="input_area">
+          <label for="distance_input"> Distância</label>
+          <div class="input_container">
+            <input type="number" placeholder="0" class="distance_input" />
+            <p>km</p>
+          </div>
+        </div>
+        <label for="twoTravel" class="twoTravelLabel"
+          ><input type="checkbox" name="twoTravel" id="twoTravel" /> Ida e
+          Volta</label
+        >
+
+        <!-- End of Input Area -->
+        <!-- Input Area -->
+        <div class="input_area">
+          <label for="distance_input"> Consumo Médio do Veículo</label>
+          <div class="input_container">
+            <input type="number" class="vehicle_input" placeholder="0" />
+            <p>km/L</p>
+          </div>
+        </div>
+        <!-- End of Input Area -->
+        <!-- Input Area -->
+        <div class="input_area">
+          <label for="distance_input">Preço por Litro</label>
+          <div class="input_container">
+            <input type="text" class="price_input" placeholder="0,00" />
+            <p>L</p>
+          </div>
+        </div>
+        <!-- End of Input Area -->
+      </div>
+      <div class="btns">
+        <button class="btn calculateButton">Calcular</button>
+        <a class="resetLink">Limpar</a>
+      </div>
+    </div>
+    <!-- End Of Container DIV -->
+
+    <div class="container result_container">
+      <button class="closeBtn">X</button>
+      <h2 class="calc_title">Meu Calcúlo</h2>
+      <div class="results_area">
+        <div class="result_area">
+          <p class="distance_description"></p>
+        </div>
+        <div class="result_area">
+          <p class="vehicle_description"></p>
+        </div>
+        <div class="result_area">
+          <p class="price_description">Preço do Combustível por Litro:</p>
+        </div>
+        <div class="result_area">
+          <p class="check_description"></p>
+        </div>
+      </div>
+      <h2 class="result_title">Resultado</h2>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Km</th>
+            <th>Consumo</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="distance_result"></td>
+            <td class="vehicle_result"></td>
+            <td class="price_result"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
